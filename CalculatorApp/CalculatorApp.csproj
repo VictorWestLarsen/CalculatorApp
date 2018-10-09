@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CalculatorLibrary">
+      <HintPath>..\..\..\..\..\Documents\Git\CalculatorLibrary\CalculatorLibrary\bin\Debug\CalculatorLibrary.dll</HintPath>
+    </Reference>
+    <Reference Include="SmartMenuLibrary">
+      <HintPath>..\..\..\..\..\Documents\Git\SmartMenuLibrary\SmartMenuLibrary\bin\Debug\SmartMenuLibrary.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MenuPoints.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
