@@ -202,5 +202,34 @@ namespace CalculatorApp
 
         }
 
+        public static void Minimum()
+        {
+            string Number;
+            string[] tmp;
+            List<double> nmb = new List<double>();
+            double v;
+            Console.WriteLine("Please enter the numbers you wish to find the maximum of ");
+            Console.WriteLine("like this x,y,...");
+            Number = Console.ReadLine();
+            tmp = Number.Split(',');
+            for (int i = 0; i < tmp.Length; i++)
+            {
+                string holder = tmp[i];
+                holder = holder.Trim();
+
+                if (double.TryParse(holder, out v))
+                {
+                    nmb.Add(v);
+                }
+                else
+                {
+                    Console.WriteLine("You can only add numbers, fucktard");
+                    return;
+                }
+
+            }
+            double min = Calculator.Minimum(nmb.ToArray());
+            Console.WriteLine("The minimum number is: " + min);
+        }
     }
 }
