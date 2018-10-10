@@ -34,10 +34,10 @@ namespace CalculatorApp
                     Console.WriteLine("You can only add numbers, fucktard");
                     return;
                 }
-                for (int j = 0; j < nmb.Count; j++)
-                {
-                    sum = CalculatorLibrary.Calculator.Add(sum, nmb[j]);
-                }
+            }
+            for (int j = 0; j < nmb.Count; j++)
+            {
+                sum = CalculatorLibrary.Calculator.Add(sum, nmb[j]);
             }
             Console.WriteLine("It adds up to: " + sum);
         }
