@@ -11,6 +11,7 @@ namespace CalculatorApp
     {
         public static void Add ()
         {
+            double sum = 0;
             string Number;
             string[] tmp;
             List <double> nmb = new List<double>();
@@ -33,15 +34,12 @@ namespace CalculatorApp
                     Console.WriteLine("You can only add numbers, fucktard");
                     return;
                 }
-
-                double sum = 0; 
                 for (int j = 0; j < nmb.Count; j++)
                 {
                     sum = CalculatorLibrary.Calculator.Add(sum, nmb[j]);
                 }
-                Console.WriteLine("It adds up to: " + sum);
             }
-
+            Console.WriteLine("It adds up to: " + sum);
         }
 
         public static void Subtract()
@@ -122,7 +120,7 @@ namespace CalculatorApp
             Console.WriteLine("Like this x/y");
             Numbers = Console.ReadLine();
             tmp = Numbers.Split('/');
-
+            double sum = 0;
             for (int i = 0; i < tmp.Length; i++)
             {
                 string holder = tmp[i];
@@ -138,13 +136,42 @@ namespace CalculatorApp
                     return;
                 }
 
-                double sum = nmb[0];
+                sum = nmb[0];
                 for (int k = 1; k < nmb.Count; k++)
                 {
                     sum = CalculatorLibrary.Calculator.Divide(sum, nmb[k]);
                 }
-                Console.WriteLine("The numbers divide is: " + sum);
             }
+            Console.WriteLine("The numbers divide is: " + sum);
+        }
+        public static void Maximum()
+        {
+            string Number;
+            string[] tmp;
+            List<double> nmb = new List<double>();
+            double v;
+            Console.WriteLine("Please enter the numbers you wish to find the maximum of ");
+            Console.WriteLine("like this x,y,...");
+            Number = Console.ReadLine();
+            tmp = Number.Split(',');
+            for (int i = 0; i < tmp.Length; i++)
+            {
+                string holder = tmp[i];
+                holder = holder.Trim();
+
+                if (double.TryParse(holder, out v))
+                {
+                    nmb.Add(v);
+                }
+                else
+                {
+                    Console.WriteLine("You can only add numbers, fucktard");
+                    return;
+                }
+                
+            }
+            double max = Calculator.Maximum(nmb.ToArray());
+            Console.WriteLine("The maximum number is: " + max);
         }
 
     }
