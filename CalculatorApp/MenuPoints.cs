@@ -107,7 +107,7 @@ namespace CalculatorApp
                 sum = Calculator.Multiply(sum, numList[1]);
             }
 
-            Console.WriteLine(number + "=" + sum);
+            Console.WriteLine(number + " = " + sum);
         }
 
         public static void Divide()
@@ -172,6 +172,34 @@ namespace CalculatorApp
             }
             double max = Calculator.Maximum(nmb.ToArray());
             Console.WriteLine("The maximum number is: " + max);
+        }
+        public static void Sum()
+        {
+            string input;
+            double parseHolder;
+            string[] tempArray;
+            string trimHolder;
+            double resultat;
+            List<double> numList = new List<double>();
+            Console.WriteLine("Please enter a series of numbers to find the sum.");
+            Console.WriteLine("Example: 1,2,3,4,5,6,7,8,9");
+            input = Console.ReadLine();
+            tempArray = input.Split(',');
+            for (int i = 0; i < tempArray.Length; i++)
+            {
+                trimHolder = tempArray[i];
+                trimHolder.Trim();
+                if (double.TryParse(trimHolder, out parseHolder))
+                {
+                    numList.Add(parseHolder);
+                }
+            }
+            resultat = CalculatorLibrary.Calculator.Sum(numList.ToArray());
+
+            Console.WriteLine("The total sum of the numbers are: " + resultat);
+
+
+
         }
 
     }
