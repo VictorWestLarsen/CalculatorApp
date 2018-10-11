@@ -114,8 +114,7 @@ namespace CalculatorApp
             string[] tmp;
             List<double> nmb = new List<double>();
             double v;
-            Console.WriteLine("Please enter the numbers you wish to divide with the number you wish to divide it by");
-            Console.WriteLine("Like this x/y");
+            Console.WriteLine("Please enter the numbers you wish to divide with the number you wish to divide it by /n Like this x/y");
             Numbers = Console.ReadLine();
             tmp = Numbers.Split('/');
             double sum = 0;
