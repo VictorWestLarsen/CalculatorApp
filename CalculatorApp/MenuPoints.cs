@@ -16,8 +16,7 @@ namespace CalculatorApp
             string[] tmp;
             List <double> nmb = new List<double>();
             double v;
-            Console.WriteLine("Please enter the numbers you wish to add");
-            Console.WriteLine("like this x + y");
+            Console.WriteLine("Please enter the numbers you wish to add /n like this x + y");
             Number = Console.ReadLine();
             tmp = Number.Split('+');
             for (int i = 0; i < tmp.Length; i++)
@@ -31,7 +30,7 @@ namespace CalculatorApp
                 }
                 else
                 {
-                    Console.WriteLine("You can only add numbers, fucktard");
+                    Console.WriteLine("You can only add numbers");
                     return;
                 }
             }
@@ -50,8 +49,7 @@ namespace CalculatorApp
             double num;
             double sum;
             List<double> numList = new List<double>();
-            Console.WriteLine("Please enter the numbers you wish to subtract");
-            Console.WriteLine("Example: A - Y");
+            Console.WriteLine("Please enter the numbers you wish to subtract /n Example: X - Y");
             numbers = Console.ReadLine();
             subArray = numbers.Split('-');
             for (int i = 0; i < subArray.Length; i++)
@@ -132,7 +130,7 @@ namespace CalculatorApp
                 }
                 else
                 {
-                    Console.WriteLine("You can only divide numbers, fucktard");
+                    Console.WriteLine("You can only divide numbers");
                     return;
                 }
 
@@ -165,7 +163,7 @@ namespace CalculatorApp
                 }
                 else
                 {
-                    Console.WriteLine("You can only add numbers, fucktard");
+                    Console.WriteLine("You can only add numbers");
                     return;
                 }
                 
@@ -208,8 +206,7 @@ namespace CalculatorApp
             string[] tmp;
             List<double> nmb = new List<double>();
             double v;
-            Console.WriteLine("Please enter the numbers you wish to find the maximum of ");
-            Console.WriteLine("like this x,y,...");
+            Console.WriteLine("Please enter the numbers you wish to find the maximum of /n like this x,y,...");
             Number = Console.ReadLine();
             tmp = Number.Split(',');
             for (int i = 0; i < tmp.Length; i++)
@@ -223,7 +220,7 @@ namespace CalculatorApp
                 }
                 else
                 {
-                    Console.WriteLine("You can only add numbers, fucktard");
+                    Console.WriteLine("You can only add numbers");
                     return;
                 }
 
