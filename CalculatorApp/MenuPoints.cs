@@ -39,7 +39,7 @@ namespace CalculatorApp
             {
                 sum = CalculatorLibrary.Calculator.Add(sum, nmb[j]);
             }
-            Console.WriteLine("It adds up to: " + sum);
+            Console.WriteLine(Number + " = " + sum);
         }
 
         public static void Subtract()
@@ -142,7 +142,7 @@ namespace CalculatorApp
                     sum = CalculatorLibrary.Calculator.Divide(sum, nmb[k]);
                 }
             }
-            Console.WriteLine("The numbers divide is: " + sum);
+            Console.WriteLine(Numbers + " = " + sum);
         }
         public static void Maximum()
         {
